@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎵 Music Genre Classifier</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎶 Music Genre Classifier</h1>
+    <p>Upload your song and discover its style!</p>
+
+    <!-- Upload Form -->
+    <form id="uploadForm">
+      <input type="file" id="fileInput" name="file" accept=".wav,.mp3,.flac" required>
+      <button type="submit">Predict Genre</button>
+    </form>
+
+    <!-- Loader -->
+    <div id="loader" class="loader hidden">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
+    <!-- Result -->
+    <div id="result" class="result hidden"></div>
+
+    <!-- Audio Preview (moved below result) -->
+    <div class="audio-preview hidden" id="audioWrapper">
+      <h3>🎧 Your Uploaded Audio:</h3>
+      <audio id="audioPlayer" controls></audio>
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
